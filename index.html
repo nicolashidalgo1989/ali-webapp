@@ -9,8 +9,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,100&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="style.css" rel="stylesheet">
 </head>
@@ -21,28 +20,37 @@
 
         <div class="wizard-content">
 
-            <nav class="navbar shadow-lg">
-                <div class="container-fluid d-flex">
+            <nav class="navbar my-5">
+                <div class="container-fluid d-flex justify-content-start">
                     <a class="navbar-brand" href="#">
-                        <img src="assets/logo-ali.svg" alt="Ali Webapp" width="24" height="24">
+                        <img src="assets/logo-ali.svg" alt="Ali Webapp" >
                     </a>
                     <ul class="navbar-nav wizard-list">
-                        <li class="nav-item wizard-item">
-                            <a class="nav-link active" aria-current="page" href="#" step="1"> 
-                                <span>Paso 1</span>
-                                <span>Seleccionar Restaurant Corporativo</span>
+                        <li class="nav-item wizard-item active">
+                            <a class="nav-link" aria-current="page" href="#" step="1"> 
+                                <span class="wizard-item-number">1</span>
+                                <span class="d-none d-xl-block">
+                                    <div class="text-uppercase h6 mb-0 fw-bold d-none d-xxl-block">Paso 1</div>
+                                    <div>Seleccionar Restaurant Corporativo</div>
+                                </span>
                             </a>
                         </li>
-                        <li class="nav-item wizard-item">
-                            <a class="nav-link disabled" aria-disabled="true" step="2"> 
-                                <span>Paso 2</span>
-                                <span>Seleccionar Opcionales</span>
+                        <li class="nav-item wizard-item disabled" aria-disabled="true">
+                            <a class="nav-link" step="2"> 
+                                <span class="wizard-item-number">2</span>
+                                <span class="d-none d-xl-block">
+                                    <div class="text-uppercase h6 mb-0 fw-bold d-none d-xxl-block">Paso 2</div>
+                                    <div>Seleccionar Opcionales</div>
+                                </span>
                             </a>
                         </li>
-                        <li class="nav-item wizard-item">
-                            <a class="nav-link disabled" aria-disabled="true" step="3"> 
-                                <span>Paso 3</span>
-                                <span>Datos y Envío</span>
+                        <li class="nav-item wizard-item disabled" aria-disabled="true">
+                            <a class="nav-link" step="3"> 
+                                <span class="wizard-item-number">3</span>
+                                <span class="d-none d-xl-block">
+                                    <div class="text-uppercase h6 mb-0 fw-bold d-none d-xxl-block">Paso 3</div>
+                                    <div>Datos y Envío</div>
+                                </span>
                             </a>
                         </li>
                     </ul>
