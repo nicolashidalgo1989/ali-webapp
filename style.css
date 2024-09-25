@@ -47,26 +47,36 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50px;
-    width: 126px;
-    height: 92px;
-    position: absolute;
-    left: 0;
-    top: 0;
+    border-radius: 50px; 
     background: white;
-    z-index: 1;
+    padding: 0 20px;
+}
+
+
+@media (min-width: 720px){
+    
+    .navbar-brand{
+        width: 126px;
+        height: 92px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        padding: 0;
+    }
+
 }
 
 .wizard-item{
     position: relative;
 }
 
-.wizard-item:first-of-type{
-    margin-left: 72px;
-    padding-left: 48px;
-}
-
 @media (min-width: 720px){
+
+    .wizard-item:first-of-type{
+        margin-left: 72px;
+        padding-left: 48px;
+    } 
 
     .wizard-item{ 
         padding-left: 32px;
@@ -82,30 +92,56 @@ body{
     padding: 20px;
 } 
 
-.wizard-item.active {
-    background: var(--green);
-}
+@media (min-width: 720px){
 
-.wizard-item.active .nav-link{
-    color: var(--light)
+    .wizard-item.active {
+        background: var(--green);
+    }
+
+    .wizard-item.active .nav-link{
+        color: var(--light)
+    }
+
 }
 
 .wizard-item-number{
-    width: 48px;
-    height: 48px;
-    background-color: var(--green);
-    color: var(--light);
+    width: 40px;
+    height: 40px;
+    background-color: var(--light);
+    color: var(--green);
     border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 16px;
-    font-size: 1.8rem;
+    margin-right: 0;
+    font-size: 1rem;
+}
+ 
+@media (min-width: 720px){
+
+    .wizard-item-number{
+        width: 48px;
+        height: 48px;
+        font-size: 1.8rem;
+        margin-right: 16px;
+        background-color: var(--green);
+        color: var(--light);
+    }
+
 }
 
 .wizard-item.active .wizard-item-number{
-    background-color: var(--light);
-    color: var(--green)
+    background-color: var(--green);
+    color: var(--light)
+}
+
+@media (min-width: 720px){
+
+    .wizard-item.active .wizard-item-number{
+        background-color: var(--light);
+        color: var(--green)
+    }
+
 }
 
 @media (min-width: 1420px){
