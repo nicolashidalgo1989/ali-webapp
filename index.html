@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Webapp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="container wizard" id="wizard">
+
+        <div class="wizard-content">
+
+            <nav class="navbar shadow-lg">
+                <div class="container-fluid d-flex">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/logo-ali.svg" alt="Ali Webapp" width="24" height="24">
+                    </a>
+                    <ul class="navbar-nav wizard-list">
+                        <li class="nav-item wizard-item">
+                            <a class="nav-link active" aria-current="page" href="#" step="1"> 
+                                <span>Paso 1</span>
+                                <span>Seleccionar Restaurant Corporativo</span>
+                            </a>
+                        </li>
+                        <li class="nav-item wizard-item">
+                            <a class="nav-link disabled" aria-disabled="true" step="2"> 
+                                <span>Paso 2</span>
+                                <span>Seleccionar Opcionales</span>
+                            </a>
+                        </li>
+                        <li class="nav-item wizard-item">
+                            <a class="nav-link disabled" aria-disabled="true" step="3"> 
+                                <span>Paso 3</span>
+                                <span>Datos y Envío</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="wizard-step-container">
+
+                <div class="wizard-step active" data-step="0">
+
+                    <section class="row">
+                        <div class="col-12">
+                            <h2 class="my-5">Restaurant Corporativo</h2> 
+                        </div>
+                        <article class="col-lg-4"> 
+                            <div class="card bg-dark text-white text-center">
+                                <header class="card-header">
+                                    <img src="assets/logo-raices.svg" alt="">
+                                </header>
+                                <!-- <img src="assets/img-01-insalata.jpg" class="card-img" alt="..."> -->
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush text-start my-4">
+                                        <li class="list-group-item">An item</li>
+                                        <li class="list-group-item">A second item</li>
+                                        <li class="list-group-item">A third item</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-primary">Ver Galería</a>
+                                </div>
+                                <div class="card-footer text-white bg-success">
+                                    Seleccionar
+                                </div>
+                            </div>
+                        </article> 
+                    </section>
+
+                    <section class="row">
+                        <div class="col-12">
+                            <h2 class="my-5">Otros Servicios</h2> 
+                        </div> 
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <img src="assets/logo-vitali.svg" alt="" class="w-100 p-5">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <img src="assets/logo-club-z.svg" alt="" class="w-100 p-5">
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+    
+                <div class="wizard-step" data-step="1">
+                    
+                </div> 
+
+                <div class="wizard-step" data-step="3">
+                    
+                </div> 
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
