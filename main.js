@@ -78,10 +78,15 @@ const rebootWizard = () => {
 var swiper1 = new Swiper(".galeriaSwiper", {
   slidesPerView: "auto",
   centeredSlides: true,
-  spaceBetween: 25, 
+  spaceBetween: 5, 
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  breakpoints: {
+    1140:{
+      spaceBetween: 25, 
+    }, 
   },
   navigation: {
     nextEl: ".swiper-button-next",
