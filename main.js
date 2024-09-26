@@ -91,13 +91,31 @@ var swiper1 = new Swiper(".galeriaSwiper", {
   keyboard: true,
 });
 
-var swiper2 = new Swiper(".menuSwiper", {
-  slidesPerView: 3.3,
-  spaceBetween: 9, 
+var swiper2 = new Swiper(".menuSwiper", {       
+  slidesPerView: 1,
+  spaceBetween: 18,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   }, 
+  breakpoints: {
+    420:{
+      slidesPerView: 2,
+      spaceBetween: 18,
+    }, 
+    820: {
+      slidesPerView: 3.3,
+      spaceBetween: 9,
+    },    
+    960:{
+      slidesPerView: 2,
+      spaceBetween: 18,
+    },
+    1140: {
+      slidesPerView: 3.3,
+      spaceBetween: 9,
+    },    
+  },
   mousewheel: true,
   keyboard: true,
 });

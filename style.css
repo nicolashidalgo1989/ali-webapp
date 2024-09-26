@@ -340,17 +340,16 @@ body {
 }
 
 .modal-header{
-    border: none;
-    padding: 0;
-    margin: 0 auto;
+    border: none; 
 }
-
+ 
 .btn-close{
     opacity: 1;
     background-size: 30px;
-    right: 5rem;
-    position: absolute;
-    background-image: url(assets/icon-close.svg)
+    /* right: 5rem; */
+    /* position: absolute; */
+    background-image: url(assets/icon-close.svg);
+    margin: 0
 }
 
 /* wizard */
