@@ -26,35 +26,52 @@ document.querySelectorAll('.carousel-item').forEach(item => {
 })
 
 const showForm = e => {
+  
+  hideOptionsElements();
   document.querySelector('form').classList.remove('d-none');
   e.target.remove();
 }
 
-const submit = () => wizardStep('1');
+const hideOptionsElements = () => {
+  document.querySelectorAll('#opciones .card.opcion').forEach( card => {
+    card.querySelector('a').classList.toggle('d-none')
+    card.querySelector('.card-footer').classList.toggle('d-none')
+  })
+}
   
-const wizardStep = step => {
-  const wizard = document.querySelectorAll(`#wizard .wizard-step`); 
-  wizard[step].classList.remove('active');
-  let intStep = parseInt(step);
-  let nextStep = (intStep === 0) ? '1' : step;
+const wizardStep = step => { 
+  const wizard = document.querySelectorAll(`#wizard .wizard-step`);   
+  let nextStep = '0';
+  nextStep = parseInt(step) + 1; 
+  wizard[step].classList.remove('active'); 
   wizard[nextStep].classList.add('active');
-  wizardList(nextStep);
+  wizardList(step, nextStep);
 }
 
-const wizardList = step => {
-  if (step === '0') {    
-    Array.from(document.querySelector(`#wizard .wizard-list`).children).forEach(item => {
-      item.classList.add('disabled')
-    })
-    document.querySelector(`#wizard .wizard-list`).children[0].classList.remove('disabled');
-  } else {
-    console.log(step); 
-    const disabledItem = document.querySelectorAll(`#wizard .wizard-list .disabled`);
-    disabledItem.forEach(item => item.classList.remove('disabled'))
-    document.querySelector(`#wizard .wizard-list`).children[0].classList.add('disabled');
-    document.querySelector(`#wizard .wizard-list`).children[0].classList.add('visited');
-  }
+const wizardList = (prev, actual) => {
+  const prevStep = document.querySelector(`#wizard .wizard-list`).children[prev];
+  const actualStep = document.querySelector(`#wizard .wizard-list`).children[actual];
+  prevStep.classList.add('visited');
+  prevStep.classList.remove('active');
+  actualStep.classList.add('active');
+  actualStep.classList.remove('disabled'); 
 }
+
+const rebootWizard = () => {
+  const wizard = document.querySelectorAll(`#wizard .wizard-step`); 
+  const steppers = document.querySelectorAll(`#wizard .wizard-list .wizard-item`);
+  steppers.forEach( step => {
+    step.classList.remove('visited');
+    step.classList.remove('active');
+    step.classList.add('disabled')
+  })
+  steppers[0].classList.add('active');
+  steppers[0].classList.remove('disabled');
+  wizard.forEach( e => e.classList.remove('active'))
+  wizard[0].classList.add('active'); 
+  hideOptionsElements();
+}
+
 
 /* swiper */
 

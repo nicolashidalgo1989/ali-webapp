@@ -230,17 +230,17 @@
                             </article>
                         </section>
 
-                        <section class="row">
+                        <section class="row mb-5">
                             <div class="col-12">
                                 <h2 class="my-5">Otros Servicios</h2>
                             </div>
                             <div class="col-lg-4">
-                                <div class="card shadow">
+                                <div class="card shadow h-100 d-flex justify-content-center">
                                     <img src="assets/logo-vitali.svg" alt="" class="w-100 p-5">
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="card shadow">
+                                <div class="card shadow h-100 d-flex align-items-center justify-content-center">
                                     <img src="assets/logo-club-z.svg" alt="" class="w-100 p-5">
                                 </div>
                             </div>
@@ -350,10 +350,10 @@
                                     <div class="card-header bg-dark px-4 d-flex align-items-center mb-4" style="height: 120px;">
                                         <h3 class="text-light m-0">Opcionales</h3>
                                     </div>
-                                    <div class="card-body p-0"> 
+                                    <div class="card-body p-0" id="opciones"> 
                                         <div class="container px-0">
                                             <div class="row">
-                                                <div class="col-4"> 
+                                                <div class="col-md-4"> 
                                                     <div class="card opcion">
                                                         <div class="card-header bg-green-dark">
                                                             <h4 class="text-light m-0 text-center h6">A Tu Gusto</h4>
@@ -375,7 +375,7 @@
                                                         </div>
                                                     </div> 
                                                 </div> 
-                                                <div class="col-4">
+                                                <div class="col-md-4">
                                                     <div class="card opcion h-100">
                                                         <div class="card-header bg-purple">
                                                             <h4 class="text-light m-0 text-center h6">Parada Gourmet</h4>
@@ -397,7 +397,7 @@
                                                         </div>
                                                     </div>
                                                 </div> 
-                                                <div class="col-4">
+                                                <div class="col-md-4">
                                                     <div class="card opcion h-100">
                                                         <div class="card-header bg-brown-dark">
                                                             <h4 class="text-light m-0 text-center h6">Mía Pasta</h4>
@@ -456,8 +456,8 @@
                                                                 </div>
                                                             </div>
                                                             <hr>
-                                                            <div class="col-lg-3 ms-auto">
-                                                                <input type="button" value="Continuar" class="rounded-0 border-0 py-2 btn btn-success bg-green w-100 text-light" onclick="wizardStep('2')">  
+                                                            <div class="col-lg-3 ms-auto pe-0">
+                                                                <input type="button" value="Continuar" class="rounded-0 border-0 py-2 btn btn-success bg-green w-100 text-light" onclick="wizardStep('1')">  
                                                             </div>
                                                         </div>
                                                     </div>
@@ -485,7 +485,7 @@
                                     </div>
                                     <h3 class="h4 fw-bold">Cotización enviada correctamente.</h3>
                                     <p class="h5 fw-normal">Nuestro equipo se contactará con el email registrado</p>
-                                    <a href="#" class="btn btn-lg btn-success bg-green my-5 px-5 rounded-0" onclick="wizardStep('0')">Volver al inicio</a>
+                                    <a href="#" class="btn btn-lg btn-success bg-green my-5 px-5 rounded-0" onclick="rebootWizard()">Volver al inicio</a>
                                 </div>
                             </div>
                         </section>
