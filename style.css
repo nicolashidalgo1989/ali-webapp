@@ -95,13 +95,12 @@ body {
 @media (min-width: 720px) {
 
     .wizard-item:first-of-type {
-        margin-left: 72px;
-        padding-left: 48px;
+        margin-left: 72px; 
     }
 
     .wizard-item {
-        padding-left: 32px;
-        padding-right: 32px;
+        padding-left: 56px;
+        padding-right: 56px;
     }
 
 }
@@ -181,10 +180,18 @@ body {
         z-index: 1;
     }
 
+    .wizard-item.visited:after{
+        border-left: 32px solid #E5E5E5; 
+    }
+
     .wizard-item.active:after {
         border-left-color: var(--green);
     }
 
+}
+
+.wizard-item.visited{ 
+    background-color: #E5E5E5;
 }
 
 /* card */
@@ -322,6 +329,11 @@ body {
 
 /* modal galeria */
 
+.modal{
+    height:90vh; 
+    top: 10vh;
+}
+
 .modal-header{
     border: none;
     padding: 0;
@@ -399,4 +411,18 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.icon-check{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green);
+}
+.icon-check img  {
+    object-fit: cover;
+    width: 50%;
 }

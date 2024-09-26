@@ -30,7 +30,7 @@
                             <img src="assets/logo-ali.svg" alt="Ali Webapp">
                         </a>
                         <ul class="navbar-nav wizard-list">
-                            <li class="nav-item wizard-item">
+                            <li class="nav-item wizard-item active">
                                 <a class="nav-link" aria-current="page" href="#" step="1">
                                     <span class="wizard-item-number">1</span>
                                     <span class="d-none d-xl-block">
@@ -48,7 +48,7 @@
                                     </span>
                                 </a>
                             </li>
-                            <li class="nav-item wizard-item active" aria-disabled="true">
+                            <li class="nav-item wizard-item disabled" aria-disabled="true">
                                 <a class="nav-link" step="3">
                                     <span class="wizard-item-number">3</span>
                                     <span class="d-none d-xl-block">
@@ -347,19 +347,19 @@
                             </div>
                             <div class="col-lg-5">
                                 <div class="card border-0 text-white text-center bg-transparent">
-                                    <div class="card-header bg-dark px-4 d-flex align-items-center" style="height: 120px;">
+                                    <div class="card-header bg-dark px-4 d-flex align-items-center mb-4" style="height: 120px;">
                                         <h3 class="text-light m-0">Opcionales</h3>
                                     </div>
-                                    <div class="card-body px-0"> 
+                                    <div class="card-body p-0"> 
                                         <div class="container px-0">
-                                            <div class="row" style="height: 100%">
-                                                <div class="col-4 pe-1">
-                                                    <div class="card opcion h-100">
+                                            <div class="row">
+                                                <div class="col-4"> 
+                                                    <div class="card opcion">
                                                         <div class="card-header bg-green-dark">
                                                             <h4 class="text-light m-0 text-center h6">A Tu Gusto</h4>
                                                         </div>
-                                                        <img src="assets/img-opcion-01.jpg" alt="" class="h-100">
-                                                        <div class="card-body">
+                                                        <img src="assets/img-opcion-01.jpg" alt="" class="card-img">
+                                                        <div class="card-body d-flex justify-content-around flex-column">
                                                             <p class="text-light text-start">
                                                                 Módulo con sándwiches, wraps, wok y otros. Frecuencia a convenir.
                                                             </p>
@@ -373,15 +373,15 @@
                                                                 </label>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> 
                                                 </div> 
-                                                <div class="col-4 px-1">
+                                                <div class="col-4">
                                                     <div class="card opcion h-100">
                                                         <div class="card-header bg-purple">
                                                             <h4 class="text-light m-0 text-center h6">Parada Gourmet</h4>
                                                         </div>
-                                                        <img src="assets/img-opcion-02.jpg" alt="" class="h-100">
-                                                        <div class="card-body">
+                                                        <img src="assets/img-opcion-02.jpg" alt="" class="card-img h-100">
+                                                        <div class="card-body d-flex justify-content-around flex-column">
                                                             <p class="text-light text-start">
                                                                 Módulo con sándwiches, wraps, wok y otros. Frecuencia a convenir.
                                                             </p>
@@ -397,13 +397,13 @@
                                                         </div>
                                                     </div>
                                                 </div> 
-                                                <div class="col-4 ps-1">
+                                                <div class="col-4">
                                                     <div class="card opcion h-100">
                                                         <div class="card-header bg-brown-dark">
                                                             <h4 class="text-light m-0 text-center h6">Mía Pasta</h4>
                                                         </div>
-                                                        <img src="assets/img-opcion-03.jpg" alt="" class="h-100">
-                                                        <div class="card-body">
+                                                        <img src="assets/img-opcion-03.jpg" alt="" class="card-img h-100">
+                                                        <div class="card-body d-flex justify-content-around flex-column">
                                                             <p class="text-light text-start">
                                                                 Módulo con sándwiches, wraps, wok y otros. Frecuencia a convenir.
                                                             </p>
@@ -429,7 +429,7 @@
                                     <div class="card-body">
                                         <div class="container">
                                             <div class="row"> 
-                                                <form action="" id="form" class="col-12 d-none py-4 px-5" onsubmit="submit()">
+                                                <form action="" id="form" class="col-12 d-none py-4 px-5">
                                                     <div class="container">
                                                         <div class="row"> 
                                                             <div class="col-12">
@@ -457,7 +457,7 @@
                                                             </div>
                                                             <hr>
                                                             <div class="col-lg-3 ms-auto">
-                                                                <input type="submit" value="Continuar" class="rounded-0 border-0 py-2 btn btn-success bg-green w-100 text-light">  
+                                                                <input type="button" value="Continuar" class="rounded-0 border-0 py-2 btn btn-success bg-green w-100 text-light" onclick="wizardStep('2')">  
                                                             </div>
                                                         </div>
                                                     </div>
@@ -473,19 +473,19 @@
                         </section>
                     </div>
 
-                    <div class="wizard-step" data-step="3">
+                    <div class="wizard-step" data-step="2">
                         <section class="row">
                             <div class="col-12">
                                 <h2 class="my-5">Datos y envios</h2>
                             </div>
                             <div class="col-12">
-                                <div class="card">
-                                    <div class="bg-green rounded-5">
+                                <div class="card border shadow p-5 text-center d-flex flex-column align-items-center justify-content-center">
+                                    <div class="icon-check mb-5">
                                         <img src="assets/icon-check.svg" alt="">
                                     </div>
-                                    <h3>Cotización enviada correctamente.</h3>
-                                    <p>Nuestro equipo se contactará con el email registrado</p>
-                                    <a href="" class="btn btn-success bg-green my-5">Volver al inicio</a>
+                                    <h3 class="h4 fw-bold">Cotización enviada correctamente.</h3>
+                                    <p class="h5 fw-normal">Nuestro equipo se contactará con el email registrado</p>
+                                    <a href="#" class="btn btn-lg btn-success bg-green my-5 px-5 rounded-0" onclick="wizardStep('0')">Volver al inicio</a>
                                 </div>
                             </div>
                         </section>
@@ -496,7 +496,7 @@
 
         </main>
 
-        <div class="modal fade" style="height:90vh; top: 10vh" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
                     <div class="modal-header container pt-5">

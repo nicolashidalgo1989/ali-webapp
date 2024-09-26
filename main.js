@@ -33,7 +33,7 @@ const showForm = e => {
 const submit = () => wizardStep('1');
   
 const wizardStep = step => {
-  const wizard = document.querySelectorAll(`#wizard  .wizard-step`); 
+  const wizard = document.querySelectorAll(`#wizard .wizard-step`); 
   wizard[step].classList.remove('active');
   let intStep = parseInt(step);
   let nextStep = (intStep === 0) ? '1' : step;
@@ -48,10 +48,11 @@ const wizardList = step => {
     })
     document.querySelector(`#wizard .wizard-list`).children[0].classList.remove('disabled');
   } else {
-    console.log(step);
+    console.log(step); 
     const disabledItem = document.querySelectorAll(`#wizard .wizard-list .disabled`);
     disabledItem.forEach(item => item.classList.remove('disabled'))
     document.querySelector(`#wizard .wizard-list`).children[0].classList.add('disabled');
+    document.querySelector(`#wizard .wizard-list`).children[0].classList.add('visited');
   }
 }
 
