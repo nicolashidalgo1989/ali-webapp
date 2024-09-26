@@ -36,7 +36,7 @@ const wizardStep = step => {
   const wizard = document.querySelectorAll(`#wizard  .wizard-step`); 
   wizard[step].classList.remove('active');
   let intStep = parseInt(step);
-  let nextStep = (intStep === 0) ? '1' : '0';
+  let nextStep = (intStep === 0) ? '1' : step;
   wizard[nextStep].classList.add('active');
   wizardList(nextStep);
 }

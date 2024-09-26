@@ -29,7 +29,7 @@
                         <img src="assets/logo-ali.svg" alt="Ali Webapp">
                     </a>
                     <ul class="navbar-nav wizard-list">
-                        <li class="nav-item wizard-item active">
+                        <li class="nav-item wizard-item">
                             <a class="nav-link" aria-current="page" href="#" step="1">
                                 <span class="wizard-item-number">1</span>
                                 <span class="d-none d-xl-block">
@@ -47,7 +47,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="nav-item wizard-item disabled" aria-disabled="true">
+                        <li class="nav-item wizard-item active" aria-disabled="true">
                             <a class="nav-link" step="3">
                                 <span class="wizard-item-number">3</span>
                                 <span class="d-none d-xl-block">
@@ -374,7 +374,7 @@
                                 <div class="card-body">
                                     <div class="container">
                                         <div class="row"> 
-                                            <form action="" id="form" class="col-12 d-none">
+                                            <form action="" id="form" class="col-12 d-none" onsubmit="submit()">
                                                 <div class="container">
                                                     <div class="row"> 
                                                         <div class="col-12">
@@ -402,7 +402,7 @@
                                                         </div>
                                                         <hr>
                                                         <div class="col-3 ms-auto">
-                                                            <input type="submit" value="Continuar" class="rounded-0 border-0 py-2 btn btn-success bg-green w-100 text-light" onclick="submit()">  
+                                                            <input type="submit" value="Continuar" class="rounded-0 border-0 py-2 btn btn-success bg-green w-100 text-light">  
                                                         </div>
                                                     </div>
                                                 </div>
@@ -422,6 +422,16 @@
                     <section class="row">
                         <div class="col-12">
                             <h2 class="my-5">Datos y envios</h2>
+                        </div>
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="bg-green rounded-5">
+                                    <img src="assets/icon-check.svg" alt="">
+                                </div>
+                                <h3>Cotización enviada correctamente.</h3>
+                                <p>Nuestro equipo se contactará con el email registrado</p>
+                                <a href="" class="btn btn-success bg-green my-5">Volver al inicio</a>
+                            </div>
                         </div>
                     </section>
                 </div>

@@ -50,6 +50,7 @@ body {
 
 .navbar {
     padding: 0;
+    overflow: hidden;
     position: relative;
     border-radius: 50px;
     box-shadow:
@@ -161,7 +162,7 @@ body {
 
 @media (min-width: 1340px) {
 
-    .wizard-item:after {
+    .wizard-item:not(:last-child):after {
         content: "";
         display: block;
         width: 0;
@@ -384,19 +385,6 @@ body {
     background-color: #989898;
 }
 
-.wizard .wizard-list .line {
-    display: inline-block;
-    width: 170px;
-    height: 4px;
-    margin: 0 24px;
-    background-color: var(--color-primary);
-    transition: background-color .3s ease-in-out;
-}
-
-.wizard .wizard-list .line.disabled {
-    background-color: #989898;
-}
-
 .overflow-scroll {
     height: calc(100vh - 400px);
     overflow-y: scroll !important;
@@ -404,8 +392,6 @@ body {
 }
  
 /* swiper */
-
-
 
 .swiper {
     width: 100%;
