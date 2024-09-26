@@ -5,492 +5,536 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Webapp</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <!-- Animate -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />    
     <link href="style.css" rel="stylesheet">
 </head>
 
-<body>
+    <body>
 
-    <main class="container px-xl-0 wizard" id="wizard">
+        <main class="container px-xl-0 wizard" id="wizard">
 
-        <div class="wizard-content">
+            <div class="wizard-content">
 
-            <nav class="navbar mt-3 my-xl-5">
-                <div class="container-fluid d-flex justify-content-xl-start justify-content-around">
-                    <a class="navbar-brand" href="#">
-                        <img src="assets/logo-ali.svg" alt="Ali Webapp">
-                    </a>
-                    <ul class="navbar-nav wizard-list">
-                        <li class="nav-item wizard-item">
-                            <a class="nav-link" aria-current="page" href="#" step="1">
-                                <span class="wizard-item-number">1</span>
-                                <span class="d-none d-xl-block">
-                                    <div class="text-uppercase h6 mb-0 fw-bold d-none d-xxl-block">Paso 1</div>
-                                    <div>Seleccionar Restaurant Corporativo</div>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="nav-item wizard-item disabled" aria-disabled="true">
-                            <a class="nav-link" step="2">
-                                <span class="wizard-item-number">2</span>
-                                <span class="d-none d-xl-block">
-                                    <div class="text-uppercase h6 mb-0 fw-bold d-none d-xxl-block">Paso 2</div>
-                                    <div>Seleccionar Opcionales</div>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="nav-item wizard-item active" aria-disabled="true">
-                            <a class="nav-link" step="3">
-                                <span class="wizard-item-number">3</span>
-                                <span class="d-none d-xl-block">
-                                    <div class="text-uppercase h6 mb-0 fw-bold d-none d-xxl-block">Paso 3</div>
-                                    <div>Datos y Envío</div>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                <nav class="navbar mt-3 my-xl-5">
+                    <div class="container-fluid px-0 d-flex justify-content-end">
+                        <a class="navbar-brand me-auto" href="#">
+                            <img src="assets/logo-ali.svg" alt="Ali Webapp">
+                        </a>
+                        <ul class="navbar-nav wizard-list">
+                            <li class="nav-item wizard-item">
+                                <a class="nav-link" aria-current="page" href="#" step="1">
+                                    <span class="wizard-item-number">1</span>
+                                    <span class="d-none d-xl-block">
+                                        <div class="text-uppercase h6 mb-0 fw-bold d-none d-xxl-block">Paso 1</div>
+                                        <div>Seleccionar Restaurant Corporativo</div>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item wizard-item disabled" aria-disabled="true">
+                                <a class="nav-link" step="2">
+                                    <span class="wizard-item-number">2</span>
+                                    <span class="d-none d-xl-block">
+                                        <div class="text-uppercase h6 mb-0 fw-bold d-none d-xxl-block">Paso 2</div>
+                                        <div>Seleccionar Opcionales</div>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item wizard-item active" aria-disabled="true">
+                                <a class="nav-link" step="3">
+                                    <span class="wizard-item-number">3</span>
+                                    <span class="d-none d-xl-block">
+                                        <div class="text-uppercase h6 mb-0 fw-bold d-none d-xxl-block">Paso 3</div>
+                                        <div>Datos y Envío</div>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
-            <div class="wizard-step-container">
+                <div class="wizard-step-container">
 
-                <div class="wizard-step active" data-step="0">
+                    <div class="wizard-step active" data-step="0">
 
-                    <section class="row">
-                        <div class="col-12">
-                            <h2 class="my-5">Restaurant Corporativo</h2>
-                        </div>
-                        <article class="col-lg-4 mb-5">
-                            <div class="card restaurant border-0 text-white text-center">
-                                <header class="card-header bg-brown">
-                                    <img src="assets/logo-raices.svg" alt="">
-                                </header>
-                                <img src="assets/bg-raices.jpg" class="card-img" alt="...">
-                                <div class="card-body bg-brown">
-                                    <ul class="list-group list-group-flush text-start my-5">
-                                        <li class="list-group-item">
-                                            <div>El caldero</div>
-                                            <div>Buffet de sopa y crema con toppings</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Plato del Chef</div>
-                                            <div>Plato de fondo de proteína más acompañamiento</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Sabor Criollo</div>
-                                            <div>Guisos y legumbres</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Vía Liviano</div>
-                                            <div>Alternativa hipocalórica - También vegetariano y vegano</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Punto Dulce</div>
-                                            <div>Postres</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Refrescante</div>
-                                            <div>Aguas saborizadas y jugos</div>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="btn btn-outline-light rounded-5 border-2 py-2 px-4 mb-2"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">Ver Galería</a>
+                        <section class="row">
+                            <div class="col-12">
+                                <h2 class="my-5">Restaurant Corporativo</h2>
+                            </div>
+                            <article class="col-lg-4 mb-5">
+                                <div class="card restaurant border-0 text-white text-center">
+                                    <header class="card-header bg-brown">
+                                        <img src="assets/logo-raices.svg" alt="">
+                                    </header>
+                                    <img src="assets/bg-raices.jpg" class="card-img" alt="...">
+                                    <div class="card-body bg-brown">
+                                        <ul class="list-group list-group-flush text-start my-5">
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>El caldero</div>
+                                                    <div>Buffet de sopa y crema con toppings</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>Plato del Chef</div>
+                                                    <div>Plato de fondo de proteína más acompañamiento</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>Sabor Criollo</div>
+                                                    <div>Guisos y legumbres</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>Vía Liviano</div>
+                                                    <div>Alternativa hipocalórica - También vegetariano y vegano</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>Punto Dulce</div>
+                                                    <div>Postres</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item" data-number="22">
+                                                <div class="list-group-item-description">
+                                                    <div>Refrescante</div>
+                                                    <div>Aguas saborizadas y jugos</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="btn btn-outline-light rounded-5 border-2 py-2 px-4 mb-2"
+                                            data-bs-toggle="modal" data-bs-target="#exampleModal">Ver Galería</a>
+                                    </div>
+                                    <div class="card-footer bg-green text-white py-3" onclick="wizardStep('0')">
+                                        Seleccionar
+                                    </div>
                                 </div>
-                                <div class="card-footer text-white py-3" onclick="wizardStep('0')">
-                                    Seleccionar
+                            </article>
+                            <article class="col-lg-4 mb-5">
+                                <div class="card restaurant border-0 text-white text-center">
+                                    <header class="card-header bg-red">
+                                        <img src="assets/logo-spazio.svg" alt="">
+                                    </header>
+                                    <img src="assets/bg-spazio.jpg" class="card-img" alt="...">
+                                    <div class="card-body bg-red">
+                                        <ul class="list-group list-group-flush text-start my-5">
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>El caldero</div>
+                                                    <div>Buffet de sopa y crema con toppings</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item" data-number="2">
+                                                <div class="list-group-item-description">
+                                                    <div>Plato del Chef</div>
+                                                    <div>Plato de fondo de proteína más acompañamiento</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>Sabor Criollo</div>
+                                                    <div>Guisos y legumbres</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>Vía Liviano</div>
+                                                    <div>Alternativa hipocalórica - También vegetariano y vegano</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>Punto Dulce</div>
+                                                    <div>Postres</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>Refrescante</div>
+                                                    <div>Aguas saborizadas y jugos</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="btn btn-outline-light rounded-5 border-2 py-2 px-4 mb-2"
+                                            data-bs-toggle="modal" data-bs-target="#exampleModal">Ver Galería</a>
+                                    </div>
+                                    <div class="card-footer bg-green text-white py-3">
+                                        Seleccionar
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-lg-4 mb-5">
+                                <div class="card restaurant border-0 text-white text-center">
+                                    <header class="card-header bg-dark">
+                                        <img src="assets/logo-deleitte.svg" alt="">
+                                    </header>
+                                    <img src="assets/bg-deleitte.jpg" class="card-img" alt="...">
+                                    <div class="card-body bg-dark">
+                                        <ul class="list-group list-group-flush text-start my-5">
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>El caldero</div>
+                                                    <div>Buffet de sopa y crema con toppings</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item" data-number="4">
+                                                <div class="list-group-item-description">
+                                                    <div>Plato del Chef</div>
+                                                    <div>Plato de fondo de proteína más acompañamiento</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item" data-number="2">
+                                                <div class="list-group-item-description">
+                                                    <div>Sabor Criollo</div>
+                                                    <div>Guisos y legumbres</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>Vía Liviano</div>
+                                                    <div>Alternativa hipocalórica - También vegetariano y vegano</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item" data-number="1">
+                                                <div class="list-group-item-description">
+                                                    <div>Punto Dulce</div>
+                                                    <div>Postres</div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="list-group-item-description">
+                                                    <div>Refrescante</div>
+                                                    <div>Aguas saborizadas y jugos</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="btn btn-outline-light rounded-5 border-2 py-2 px-4 mb-2"
+                                            data-bs-toggle="modal" data-bs-target="#exampleModal">Ver Galería</a>
+                                    </div>
+                                    <div class="card-footer bg-green text-white py-3">
+                                        Seleccionar
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+
+                        <section class="row">
+                            <div class="col-12">
+                                <h2 class="my-5">Otros Servicios</h2>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card shadow">
+                                    <img src="assets/logo-vitali.svg" alt="" class="w-100 p-5">
                                 </div>
                             </div>
-                        </article>
-                        <article class="col-lg-4 mb-5">
-                            <div class="card restaurant border-0 text-white text-center">
-                                <header class="card-header bg-red">
-                                    <img src="assets/logo-spazio.svg" alt="">
-                                </header>
-                                <img src="assets/bg-spazio.jpg" class="card-img" alt="...">
-                                <div class="card-body bg-red">
-                                    <ul class="list-group list-group-flush text-start my-5">
-                                        <li class="list-group-item">
-                                            <div>El caldero</div>
-                                            <div>Buffet de sopa y crema con toppings</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Plato del Chef</div>
-                                            <div>Plato de fondo de proteína más acompañamiento</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Sabor Criollo</div>
-                                            <div>Guisos y legumbres</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Vía Liviano</div>
-                                            <div>Alternativa hipocalórica - También vegetariano y vegano</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Punto Dulce</div>
-                                            <div>Postres</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Refrescante</div>
-                                            <div>Aguas saborizadas y jugos</div>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="btn btn-outline-light rounded-5 border-2 py-2 px-4 mb-2"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">Ver Galería</a>
-                                </div>
-                                <div class="card-footer text-white py-3">
-                                    Seleccionar
+                            <div class="col-lg-4">
+                                <div class="card shadow">
+                                    <img src="assets/logo-club-z.svg" alt="" class="w-100 p-5">
                                 </div>
                             </div>
-                        </article>
-                        <article class="col-lg-4 mb-5">
-                            <div class="card restaurant border-0 text-white text-center">
-                                <header class="card-header bg-dark">
-                                    <img src="assets/logo-deleitte.svg" alt="">
-                                </header>
-                                <img src="assets/bg-deleitte.jpg" class="card-img" alt="...">
-                                <div class="card-body bg-dark">
-                                    <ul class="list-group list-group-flush text-start my-5">
-                                        <li class="list-group-item">
-                                            <div>El caldero</div>
-                                            <div>Buffet de sopa y crema con toppings</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Plato del Chef</div>
-                                            <div>Plato de fondo de proteína más acompañamiento</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Sabor Criollo</div>
-                                            <div>Guisos y legumbres</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Vía Liviano</div>
-                                            <div>Alternativa hipocalórica - También vegetariano y vegano</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Punto Dulce</div>
-                                            <div>Postres</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div>Refrescante</div>
-                                            <div>Aguas saborizadas y jugos</div>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="btn btn-outline-light rounded-5 border-2 py-2 px-4 mb-2"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">Ver Galería</a>
-                                </div>
-                                <div class="card-footer text-white py-3">
-                                    Seleccionar
-                                </div>
-                            </div>
-                        </article>
-                    </section>
+                        </section>
 
-                    <section class="row">
-                        <div class="col-12">
-                            <h2 class="my-5">Otros Servicios</h2>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="card shadow">
-                                <img src="assets/logo-vitali.svg" alt="" class="w-100 p-5">
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="card shadow">
-                                <img src="assets/logo-club-z.svg" alt="" class="w-100 p-5">
-                            </div>
-                        </div>
-                    </section>
+                    </div>
 
-                </div>
-
-                <div class="wizard-step" data-step="1">
-                    <section class="row">
-                        <div class="col-12">
-                            <h2 class="my-5">Selecionar Opcionales</h2>
-                        </div>
-                        <div class="col-7">
-                            <div class="card restaurant border-0 text-white text-center bg-transparent">
-                                <header class="card-header bg-brown mb-2">
-                                    <img src="assets/logo-raices.svg" alt="">
-                                </header>
-                                <div class="card-body px-0">
-                                    <div class="swiper mySwiper">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="card menu w-100">
-                                                    <header class="card-header bg-brown">
-                                                        <h3 class="text-light m-0">Insalata</h3>
-                                                    </header> 
-                                                    <img src="assets/img-01-insalata.jpg" class="card-img" alt="...">
-                                                    <div class="card-body">
-                                                        <p class="text-light text-start">Tres vegetales crudos o cocidos combinados entre sí</p>
+                    <div class="wizard-step" data-step="1">
+                        <section class="row">
+                            <div class="col-12">
+                                <h2 class="my-5">Selecionar Opcionales</h2>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card restaurant border-0 text-white text-center bg-transparent">
+                                    <header class="card-header bg-brown mb-2">
+                                        <img src="assets/logo-raices.svg" alt="">
+                                    </header>
+                                    <div class="card-body px-0">
+                                        <div class="swiper menuSwiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="card menu w-100">
+                                                        <header class="card-header bg-brown">
+                                                            <h3 class="text-light m-0 h6">Insalata</h3>
+                                                        </header> 
+                                                        <img src="assets/img-01-insalata.jpg" class="card-img" alt="...">
+                                                        <div class="card-body">
+                                                            <p class="text-light text-start">Tres vegetales crudos o cocidos combinados entre sí</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="card menu w-100">
-                                                    <header class="card-header bg-brown">
-                                                        <h3 class="text-light m-0">Caldero</h3>
-                                                    </header> 
-                                                    <img src="assets/img-02-caldero.jpg" class="card-img" alt="...">
-                                                    <div class="card-body">
-                                                        <p class="text-light text-start">Tres vegetales crudos o cocidos combinados entre sí</p>
+                                                <div class="swiper-slide">
+                                                    <div class="card menu w-100">
+                                                        <header class="card-header bg-brown">
+                                                            <h3 class="text-light m-0 h6">Caldero</h3>
+                                                        </header> 
+                                                        <img src="assets/img-02-caldero.jpg" class="card-img h-100" alt="...">
+                                                        <div class="card-body">
+                                                            <p class="text-light text-start">Buffet de sopa y crema con toppings</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="swiper-slide"> 
-                                                <div class="card menu w-100">
-                                                    <header class="card-header bg-brown">
-                                                        <h3 class="text-light m-0">Chef</h3>
-                                                    </header> 
-                                                    <img src="assets/img-03-chef.jpg" class="card-img" alt="...">
-                                                    <div class="card-body">
-                                                        <p class="text-light text-start">Tres vegetales crudos o cocidos combinados entre sí</p>
+                                                <div class="swiper-slide"> 
+                                                    <div class="card menu w-100">
+                                                        <header class="card-header bg-brown">
+                                                            <h3 class="text-light m-0 h6">Plato del Chef</h3>
+                                                        </header> 
+                                                        <img src="assets/img-03-chef.jpg" class="card-img" a h-100lt="...">
+                                                        <div class="card-body">
+                                                            <p class="text-light text-start">Plato de fondo de proteína más acompañamiento</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="card menu w-100">
-                                                    <header class="card-header bg-brown">
-                                                        <h3 class="text-light m-0">Criollo</h3>
-                                                    </header> 
-                                                    <img src="assets/img-04-criollo.jpg" class="card-img" alt="...">
-                                                    <div class="card-body">
-                                                        <p class="text-light text-start">Tres vegetales crudos o cocidos combinados entre sí</p>
+                                                <div class="swiper-slide">
+                                                    <div class="card menu w-100">
+                                                        <header class="card-header bg-brown">
+                                                            <h3 class="text-light m-0 h6">Sabor Criollo</h3>
+                                                        </header> 
+                                                        <img src="assets/img-04-criollo.jpg" class="card-img h-100" alt="...">
+                                                        <div class="card-body">
+                                                            <p class="text-light text-start">Guisos y legumbres</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="card menu w-100">
-                                                    <header class="card-header bg-brown">
-                                                        <h3 class="text-light m-0">Liviano</h3>
-                                                    </header> 
-                                                    <img src="assets/img-05-liviano.jpg" class="card-img" alt="...">
-                                                    <div class="card-body">
-                                                        <p class="text-light text-start">Tres vegetales crudos o cocidos combinados entre sí</p>
+                                                <div class="swiper-slide">
+                                                    <div class="card menu w-100">
+                                                        <header class="card-header bg-brown">
+                                                            <h3 class="text-light m-0 h6">Vía Liviano</h3>
+                                                        </header> 
+                                                        <img src="assets/img-05-liviano.jpg" class="card-img h-100" alt="...">
+                                                        <div class="card-body">
+                                                            <p class="text-light text-start">Alternativa hipocalórica - También vegetariano y vegano</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="card menu w-100">
-                                                    <header class="card-header bg-brown">
-                                                        <h3 class="text-light m-0">Dulce</h3>
-                                                    </header> 
-                                                    <img src="assets/img-06-dulce.jpg" class="card-img" alt="...">
-                                                    <div class="card-body">
-                                                        <p class="text-light text-start">Tres vegetales crudos o cocidos combinados entre sí</p>
+                                                <div class="swiper-slide">
+                                                    <div class="card menu w-100">
+                                                        <header class="card-header bg-brown">
+                                                            <h3 class="text-light m-0 h6">Punto Dulce</h3>
+                                                        </header> 
+                                                        <img src="assets/img-06-dulce.jpg" class="card-img h-100"  alt="...">
+                                                        <div class="card-body">
+                                                            <p class="text-light text-start">Postres</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="swiper-slide"> 
-                                                <div class="card menu w-100">
-                                                    <header class="card-header bg-brown">
-                                                        <h3 class="text-light m-0">Refrescante</h3>
-                                                    </header> 
-                                                    <img src="assets/img-07-refrescante.jpg" class="card-img" alt="...">
-                                                    <div class="card-body">
-                                                        <p class="text-light text-start">Tres vegetales crudos o cocidos combinados entre sí</p>
+                                                <div class="swiper-slide"> 
+                                                    <div class="card menu w-100">
+                                                        <header class="card-header bg-brown">
+                                                            <h3 class="text-light m-0 h6">Refrescante</h3>
+                                                        </header> 
+                                                        <img src="assets/img-07-refrescante.jpg" class="card-img h-100" alt="...">
+                                                        <div class="card-body">
+                                                            <p class="text-light text-start">Aguas saborizadas y jugos</p>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                </div> 
                                             </div> 
+                                            <div class="swiper-button-next invert"></div>
+                                            <div class="swiper-button-prev invert"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="card border-0 text-white text-center bg-transparent">
+                                    <div class="card-header bg-dark px-4 d-flex align-items-center" style="height: 120px;">
+                                        <h3 class="text-light m-0">Opcionales</h3>
+                                    </div>
+                                    <div class="card-body px-0"> 
+                                        <div class="container px-0">
+                                            <div class="row" style="height: 100%">
+                                                <div class="col-4 pe-1">
+                                                    <div class="card opcion h-100">
+                                                        <div class="card-header bg-green-dark">
+                                                            <h4 class="text-light m-0 text-center h6">A Tu Gusto</h4>
+                                                        </div>
+                                                        <img src="assets/img-opcion-01.jpg" alt="" class="h-100">
+                                                        <div class="card-body">
+                                                            <p class="text-light text-start">
+                                                                Módulo con sándwiches, wraps, wok y otros. Frecuencia a convenir.
+                                                            </p>
+                                                            <a href="#" class="btn btn-outline-light rounded-5 border-2 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver Galería</a>
+                                                        </div>
+                                                        <div class="card-footer bg-green-light">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="opcion1">
+                                                                <label class="form-check-label fw-normal" for="opcion1">
+                                                                    Seleccionar
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <div class="col-4 px-1">
+                                                    <div class="card opcion h-100">
+                                                        <div class="card-header bg-purple">
+                                                            <h4 class="text-light m-0 text-center h6">Parada Gourmet</h4>
+                                                        </div>
+                                                        <img src="assets/img-opcion-02.jpg" alt="" class="h-100">
+                                                        <div class="card-body">
+                                                            <p class="text-light text-start">
+                                                                Módulo con sándwiches, wraps, wok y otros. Frecuencia a convenir.
+                                                            </p>
+                                                            <a href="#" class="btn btn-outline-light rounded-5 border-2 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver Galería</a>
+                                                        </div>
+                                                        <div class="card-footer bg-green-light">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="opcion1">
+                                                                <label class="form-check-label fw-normal" for="opcion1">
+                                                                    Seleccionar
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <div class="col-4 ps-1">
+                                                    <div class="card opcion h-100">
+                                                        <div class="card-header bg-brown-dark">
+                                                            <h4 class="text-light m-0 text-center h6">Mía Pasta</h4>
+                                                        </div>
+                                                        <img src="assets/img-opcion-03.jpg" alt="" class="h-100">
+                                                        <div class="card-body">
+                                                            <p class="text-light text-start">
+                                                                Módulo con sándwiches, wraps, wok y otros. Frecuencia a convenir.
+                                                            </p>
+                                                            <a href="#" class="btn btn-outline-light rounded-5 border-2 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver Galería</a>
+                                                        </div>
+                                                        <div class="card-footer bg-green-light">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="" id="opcion3">
+                                                                <label class="form-check-label fw-normal" for="opcion3">
+                                                                    Seleccionar
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div> 
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-5">
-                            <div class="card border-0 text-white text-center bg-transparent">
-                                <div class="card-header bg-dark px-4 d-flex align-items-center" style="height: 120px;">
-                                    <h3 class="text-light m-0">Opcionales</h3>
-                                </div>
-                                <div class="card-body px-0"> 
-                                    <div class="container px-0">
-                                        <div class="row">
-                                            <div class="col-4 pe-1">
-                                                <div class="card opcion border-0 h-100">
-                                                    <div class="card-header bg-green-dark">
-                                                        <h4 class="text-light m-0 text-center h5">A Tu Gusto</h4>
-                                                    </div>
-                                                    <img src="assets/img-opcion-01.jpg" alt="">
-                                                    <div class="card-footer">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="opcion1">
-                                                            <label class="form-check-label" for="opcion1">
-                                                                Seleccionar
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> 
-                                            <div class="col-4 px-1">
-                                                <div class="card opcion border-0">
-                                                    <div class="card-header bg-purple">
-                                                        <h4 class="text-light m-0 text-center h5">Parada Gourmet</h4>
-                                                    </div>
-                                                    <img src="assets/img-opcion-02.jpg" alt="">
-                                                    <div class="card-footer"> 
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="opcion2">
-                                                            <label class="form-check-label" for="opcion2">
-                                                                Seleccionar
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> 
-                                            <div class="col-4 ps-1">
-                                                <div class="card opcion border-0">
-                                                    <div class="card-header bg-brown-dark">
-                                                        <h4 class="text-light m-0 text-center h5">Mía Pasta</h4>
-                                                    </div>
-                                                    <img src="assets/img-opcion-03.jpg" alt="">
-                                                    <div class="card-footer">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="opcion3">
-                                                            <label class="form-check-label" for="opcion3">
-                                                                Seleccionar
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 my-5">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="container">
-                                        <div class="row"> 
-                                            <form action="" id="form" class="col-12 d-none" onsubmit="submit()">
-                                                <div class="container">
-                                                    <div class="row"> 
-                                                        <div class="col-12">
-                                                            <legend class="mb-3 h5">Datos cotización</legend> 
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="mb-3">
-                                                                <label for="nombre" class="form-label">Nombre</label>
-                                                                <input type="text" class="form-control" id="nombre" name="nombre">
+                            <div class="col-12 my-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="container">
+                                            <div class="row"> 
+                                                <form action="" id="form" class="col-12 d-none py-4 px-5" onsubmit="submit()">
+                                                    <div class="container">
+                                                        <div class="row"> 
+                                                            <div class="col-12">
+                                                                <legend class="mb-3 h5">Datos cotización</legend> 
                                                             </div>
-                                                            <div class="mb-3">
-                                                                <label for="apellido" class="form-label">Apellido</label>
-                                                                <input type="text" class="form-control" id="apellido" name="apellido">
+                                                            <div class="col-6 col-lg-4">
+                                                                <div class="mb-3">
+                                                                    <label for="nombre" class="form-label h6 fw-bold">Nombre</label>
+                                                                    <input type="text" class="form-control" id="nombre" name="nombre">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="apellido" class="form-label h6 fw-bold">Apellido</label>
+                                                                    <input type="text" class="form-control" id="apellido" name="apellido">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6 col-lg-4"> 
+                                                                <div class="mb-3">
+                                                                    <label for="email" class="form-label h6 fw-bold">Email</label>
+                                                                    <input type="text" class="form-control" id="email" name="email">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="empresa" class="form-label h6 fw-bold">Empresa</label>
+                                                                    <input type="text" class="form-control" id="empresa" name="empresa">
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="col-lg-3 ms-auto">
+                                                                <input type="submit" value="Continuar" class="rounded-0 border-0 py-2 btn btn-success bg-green w-100 text-light">  
                                                             </div>
                                                         </div>
-                                                        <div class="col-4"> 
-                                                            <div class="mb-3">
-                                                                <label for="email" class="form-label">Email</label>
-                                                                <input type="text" class="form-control" id="email" name="email">
-                                                            </div>
-                                                            <div class="mb-3">
-                                                                <label for="empresa" class="form-label">Empresa</label>
-                                                                <input type="text" class="form-control" id="empresa" name="empresa">
-                                                            </div>
-                                                        </div>
-                                                        <hr>
-                                                        <div class="col-3 ms-auto">
-                                                            <input type="submit" value="Continuar" class="rounded-0 border-0 py-2 btn btn-success bg-green w-100 text-light">  
-                                                        </div>
                                                     </div>
+                                                </form>
+                                                <div class="col-lg-3 ms-auto">
+                                                    <button type="button" class="rounded-0 border-0 py-2 btn btn-success bg-green w-100 text-light" onclick="showForm(event)">Continuar</button>
                                                 </div>
-                                            </form>
-                                            <div class="col-3 ms-auto">
-                                                <button type="button" class="rounded-0 border-0 py-2 btn btn-success bg-green w-100 text-light" onclick="showForm(event)">Continuar</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                    </div>
+
+                    <div class="wizard-step" data-step="3">
+                        <section class="row">
+                            <div class="col-12">
+                                <h2 class="my-5">Datos y envios</h2>
+                            </div>
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="bg-green rounded-5">
+                                        <img src="assets/icon-check.svg" alt="">
+                                    </div>
+                                    <h3>Cotización enviada correctamente.</h3>
+                                    <p>Nuestro equipo se contactará con el email registrado</p>
+                                    <a href="" class="btn btn-success bg-green my-5">Volver al inicio</a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
 
-                <div class="wizard-step" data-step="3">
-                    <section class="row">
-                        <div class="col-12">
-                            <h2 class="my-5">Datos y envios</h2>
-                        </div>
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="bg-green rounded-5">
-                                    <img src="assets/icon-check.svg" alt="">
-                                </div>
-                                <h3>Cotización enviada correctamente.</h3>
-                                <p>Nuestro equipo se contactará con el email registrado</p>
-                                <a href="" class="btn btn-success bg-green my-5">Volver al inicio</a>
-                            </div>
-                        </div>
-                    </section>
-                </div>
             </div>
 
-        </div>
+        </main>
 
-    </main>
-
-    <div class="modal fade" style="height: 90vh; top: 10vh" id="exampleModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="modal-header container">
-                    <h2 class="modal-title" id="exampleModalLabel">Galería Restaurant Corporativo: Raices</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="galeria" class="carousel show-neighbors" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="item__third">
-                                    <img src="assets/restaurant.jpg" class="d-block w-100" alt="">
+        <div class="modal fade" style="height:90vh; top: 10vh" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header container pt-5">
+                        <h2 class="modal-title" id="exampleModalLabel">Galería Restaurant Corporativo: Raices</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body py-5 px-0">
+                        <div class="swiper galeriaSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/restaurant.jpg" alt="">
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="item__third">
-                                    <img src="assets/restaurant.jpg" class="d-block w-100" alt="">
+                                <div class="swiper-slide"> 
+                                    <img src="assets/restaurant.jpg" alt="">
                                 </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/restaurant.jpg" alt="">
+                                </div> 
                             </div>
-                            <div class="carousel-item">
-                                <div class="item__third">
-                                    <img src="assets/restaurant.jpg" class="d-block w-100" alt="">
-                                </div>
-                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
-                        <a class="carousel-control-prev" data-bs-target="#galeria"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" data-bs-target="#galeria"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 
-            <!-- Swiper JS -->
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-            
-            <script src="main.js"></script>
+        <!-- Swiper -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        
+        <!-- Main JS -->
+        <script src="main.js"></script>
 
-</body>
+    </body>
 
 </html>

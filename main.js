@@ -42,9 +42,7 @@ const wizardStep = step => {
 }
 
 const wizardList = step => {
-  if (step === '0') {
-    console.log(step);
-    
+  if (step === '0') {    
     Array.from(document.querySelector(`#wizard .wizard-list`).children).forEach(item => {
       item.classList.add('disabled')
     })
@@ -59,17 +57,29 @@ const wizardList = step => {
 
 /* swiper */
 
-var swiper = new Swiper(".mySwiper", {
+var swiper1 = new Swiper(".galeriaSwiper", {
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 25, 
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  }, 
+  mousewheel: true,
+  keyboard: true,
+});
+
+var swiper2 = new Swiper(".menuSwiper", {
   slidesPerView: 3.3,
   spaceBetween: 9, 
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  }, 
   mousewheel: true,
   keyboard: true,
 });
